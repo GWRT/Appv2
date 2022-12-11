@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Appv2</string>
+    <string-array name="carreras_">
+        <item>Administracion</item>
+        <item>Ingeniería</item>
+        <item>Ciencias Historicas</item>
+        <item>Medicina</item>
+        <item>Juridiccion</item>
+        <item>Sociología</item>
+        <item>Literartura</item>
+        <item>Natacion</item>
+        <item>Contabilidad</item>
+        <item>Biología</item>
+        <item>Coputacion</item>
+        <item>Mecanica</item>
+        <item>Educacion</item>
+        <item>Psicología</item>
+        <item>Derecho</item>
+        <item>Ambiental</item>
+    </string-array>
+</resources>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient_register"
+    tools:context=".Activity_PostulanteRegistro"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingHorizontal="20dp"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Registro del Postulante"
+        android:textColor="@color/purple_500"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_marginVertical="20dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="15dp"
+        >
+
+        <TextView
+            android:id="@+id/textViewDNI"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="DNI del postulante:"
+            />
+
+        <EditText
+            android:id="@+id/editTextDNI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="15dp"
+        >
+        <TextView
+            android:id="@+id/textViewApPaterno"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Apellido Paterno:"
+            />
+
+        <EditText
+            android:id="@+id/apPaterno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="15dp"
+        >
+        <TextView
+            android:id="@+id/textViewApMaterno"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Apellido Materno:"
+            />
+
+        <EditText
+            android:id="@+id/apMaterno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text=""
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="15dp"
+        >
+        <TextView
+            android:id="@+id/textViewNombres"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Nombres:"
+            />
+        <EditText
+            android:id="@+id/nombres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="15dp"
+        >
+        <TextView
+            android:id="@+id/textViewFechaNac"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Fecha de Nacimiento:"
+            />
+        <EditText
+            android:id="@+id/fechaNac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="dd/mm/aa"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="left"
+        android:layout_marginBottom="15dp"
+        >
+        <TextView
+            android:id="@+id/textViewColegio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Colegio de Procedencia:"
+            android:layout_marginBottom="10dp"
+            />
+
+        <EditText
+            android:id="@+id/colegioP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text=""
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="left"
+        android:layout_marginBottom="15dp"
+        >
+        <TextView
+            android:id="@+id/textViewCarrera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Carrera a la que postula:"
+            android:layout_marginBottom="10dp"
+            />
+
+        <Spinner
+            android:id="@+id/carrera"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/registrar"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="-20dp"
+        android:text="Registrar"
+        android:drawableLeft="@drawable/ic_baseline_group_add_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</LinearLayout>

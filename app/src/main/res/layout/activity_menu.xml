@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    tools:context=".Activity_Menu"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="Opciones de Usuario"
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:orientation="vertical"
+        android:gravity="center">
+        <Button
+            android:id="@+id/buttonNuevo"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@null"
+            android:background="@drawable/btn_menu_shape"
+            android:layout_marginBottom="30dp"
+            android:drawableLeft="@drawable/ic_baseline_group_add_24"
+            android:onClick="registroPostulante"
+            android:text="Nuevo Registro de Postulante" />
+
+        <Button
+            android:id="@+id/buttonInfoPostulante"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/btn_menu_shape"
+            android:drawableLeft="@drawable/ic_baseline_assignment_24"
+            android:backgroundTint="@null"
+            android:onClick="postulanteInfo"
+            android:text="Informacion de postulante" />
+
+        <TextView
+            android:id="@+id/textViewPostulantes"
+            android:layout_width="240dp"
+            android:layout_height="100dp"
+            android:text="Postulante añadido recientemente:"
+            android:textColor="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/others"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/socialicons"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-20dp"
+        android:text="Visite nuestras redes sociales"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/socialicons"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/google"
+            />
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/fb"
+            />
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/twitter"
+            />
+    </LinearLayout>
+
+</LinearLayout>
