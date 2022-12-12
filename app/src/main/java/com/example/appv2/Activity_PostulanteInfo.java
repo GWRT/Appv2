@@ -26,13 +26,15 @@ public class Activity_PostulanteInfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_postulante_info);
 
-        EditText dni = findViewById(R.id.editTextDNI);
-        Button buscar = findViewById(R.id.buttonBuscar);
+        Helper helper = new Helper(getApplicationContext());
+
+        //EditText dni = findViewById(R.id.editTextDNI);
+        //Button buscar = findViewById(R.id.buttonBuscar);
         TextView datos = findViewById(R.id.textViewDatos);
 
-        Intent intent = getIntent();
-        Bundle args = intent.getBundleExtra("p");
-        ArrayList post = (ArrayList<Postulante>) args.getSerializable("p");
+        //Intent intent = getIntent();
+        //Bundle args = intent.getBundleExtra("p");
+        //ArrayList post = (ArrayList<Postulante>) args.getSerializable("p");
 //        buscar.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
@@ -42,41 +44,15 @@ public class Activity_PostulanteInfo extends AppCompatActivity {
 //            }
 //        });
 
-        datos.setText(readPostulante());
+        datos.setText(helper.readPostulante());
     }
 
-    public Postulante buscarPorDNI(String DNI, ArrayList<Postulante> Post){
-        for (int i=0; i<Post.size(); i++) {
-            if (Post.get(i).dni.equals(DNI))
-                return Post.get(i);
-            }
-        Postulante obj=new Postulante(null, null, null, null, null, null, null);
-        return obj;
-    }
-
-    public String readPostulante(){
-        FileInputStream fis = null;
-        StringBuilder sb = new StringBuilder();
-        String postulante = "";
-
-        try{
-            fis = openFileInput(FILE_NAME);
-            InputStreamReader isr = new InputStreamReader(fis);
-            BufferedReader br = new BufferedReader(isr);
-            String line;
-
-            while((line = br.readLine()) != null){
-                sb.append(line).append("\n");
-            }
-
-        }catch (FileNotFoundException fe){
-           fe.printStackTrace();
-        }catch (IOException e){
-            e.printStackTrace();
-        }finally {
-            postulante = sb.toString();
-        }
-
-        return postulante;
-    }
+//    public Postulante buscarPorDNI(String DNI, ArrayList<Postulante> Post){
+//        for (int i=0; i<Post.size(); i++) {
+//            if (Post.get(i).dni.equals(DNI))
+//                return Post.get(i);
+//            }
+//        Postulante obj=new Postulante(null, null, null, null, null, null, null);
+//        return obj;
+//    }
 }

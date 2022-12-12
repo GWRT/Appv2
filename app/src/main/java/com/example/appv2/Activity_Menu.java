@@ -20,12 +20,13 @@ import java.util.ArrayList;
 
 public class Activity_Menu extends AppCompatActivity {
 
-    private static final String FILE_NAME = "postulantes.txt";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        Helper helper = new Helper(getApplicationContext());
+
         Button Nuevo = findViewById(R.id.buttonNuevo);
         Button InfoP = findViewById(R.id.buttonInfoPostulante);
         TextView PostulantesAdd = findViewById(R.id.textViewPostulantes);
@@ -40,9 +41,9 @@ public class Activity_Menu extends AppCompatActivity {
                         if (result.getResultCode()==1){
                             Intent intent = result.getData();
                             if (intent != null){
-                                //postulantes.add((Postulante) intent.getSerializableExtra("postulante"));
+                                postulantes.add((Postulante) intent.getSerializableExtra("postulante"));
 
-                                writePostulante((Postulante) intent.getSerializableExtra("postulante"));
+                                helper.writePostulante((Postulante)postulantes.get(postulantes.size()-1));
 
                                 PostulantesAdd.setText(postulantes.get(postulantes.size()-1).Resumen());
                             }
@@ -69,28 +70,6 @@ public class Activity_Menu extends AppCompatActivity {
             }
         });
 
-    }
-
-    public void writePostulante(Postulante postulante){
-        FileOutputStream fos = null;
-
-        try {
-            fos = openFileOutput(FILE_NAME, MODE_PRIVATE);
-            fos.write(postulante.Mostrar().getBytes());
-        }catch (FileNotFoundException fe){
-            fe.printStackTrace();
-        } catch (IOException e){
-            e.printStackTrace();
-        }
-        finally {
-            if (fos != null){
-                try {
-                    fos.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
     }
 
 }

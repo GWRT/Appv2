@@ -29,6 +29,6 @@ public class Postulante implements Serializable {
                 +"\n|-> Apellidos: "+ apPaterno+" "+apMaterno
                 +"\n|-> Fecha de Nacimiento: "+fechaNac
                 +"\n|-> Colegio de Procedencia: "+colegioP
-                +"\n|-> Carrera: "+carrera;
+                +"\n|-> Carrera: "+carrera+"\n";
     }
 }
